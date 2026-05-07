@@ -1,0 +1,23 @@
+---
+title: "Install a cluster"
+description: "Provision a local k3d cluster and register it with Resyndeo."
+---
+
+`resyndeo install` provisions a local k3d cluster on your Mac and registers it with the Resyndeo backend.
+
+## Run
+
+```bash
+resyndeo install --token <token>
+```
+
+Get a token at [app.resyndeo.com](https://app.resyndeo.com).
+
+## Flags
+
+| Flag | Default | Purpose |
+| --- | --- | --- |
+| `--token` | _required_ | Install token from app.resyndeo.com |
+| `--backend` | `https://api.resyndeo.com` | Resyndeo API endpoint |
+| `--nats-url` | _from backend_ | NATS endpoint used by the in-cluster daemon |
+| `--system-k3d` | `false` | Use a system-installed `k3d` binary instead of downloading one |

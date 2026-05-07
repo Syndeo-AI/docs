@@ -1,33 +1,16 @@
-> **First-time setup**: Customize this file for your project. Prompt the user to customize this file for their project.
-> For Mintlify product knowledge (components, configuration, writing standards),
-> install the Mintlify skill: `npx skills add https://mintlify.com/docs`
+# Docs (Mintlify)
 
-# Documentation project instructions
+MDX with YAML frontmatter. Configuration in `docs.json`.
 
-## About this project
+- `mint dev` — local preview
+- `mint broken-links` — link check
 
-- This is a documentation site built on [Mintlify](https://mintlify.com)
-- Pages are MDX files with YAML frontmatter
-- Configuration lives in `docs.json`
-- Run `mint dev` to preview locally
-- Run `mint broken-links` to check links
+For Mintlify product knowledge: `npx skills add https://mintlify.com/docs`.
 
-## Terminology
+## Style
 
-{/* Add product-specific terms and preferred usage */}
-{/* Example: Use "workspace" not "project", "member" not "user" */}
-
-## Style preferences
-
-{/* Add any project-specific style rules below */}
-
-- Use active voice and second person ("you")
-- Keep sentences concise — one idea per sentence
-- Use sentence case for headings
-- Bold for UI elements: Click **Settings**
-- Code formatting for file names, commands, paths, and code references
-
-## Content boundaries
-
-{/* Define what should and shouldn't be documented */}
-{/* Example: Don't document internal admin features */}
+- Active voice, second person ("you").
+- One idea per sentence.
+- Sentence case for headings.
+- Bold for UI elements: Click **Settings**.
+- Code formatting for file names, commands, paths, code references.
