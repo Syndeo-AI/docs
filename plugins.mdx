@@ -1,0 +1,35 @@
+---
+title: "Plugins"
+description: "The Helm charts you can deploy from the Resyndeo marketplace."
+---
+
+Every plugin is a Helm chart the backend ships to your cluster via the in-cluster agent. Install one from the [marketplace](/install-plugin).
+
+## Hello World
+
+A minimal sample chart. Use it to confirm the install pipeline works end-to-end before reaching for a real plugin.
+
+- **Format:** Helm chart
+- **Settings:** none
+- **What lands on your cluster:** a single placeholder Pod in its own namespace.
+
+## Static Site
+
+Drag-and-drop host for a static website (HTML, CSS, JS). After install, upload a zipped bundle from the dashboard and an in-cluster `nginx` begins serving it immediately. Same UX intent as Vercel or Netlify deploys, scoped to one chart install.
+
+- **Format:** Helm chart
+- **Settings:** none at install time; you upload the bundle after install.
+- **What lands on your cluster:** one Pod running `nginx` plus a small uploader sidecar, an Ingress, and a Service.
+- **Limits:** single replica; content lives in an `emptyDir`, so a Pod restart wipes the site and you re-upload. Max bundle size is 50 MB.
+
+## Postgres
+
+Single-node Postgres database for plugins or apps that need a relational store on your cluster.
+
+- **Format:** Helm chart
+- **Available versions:** 18, 17
+- **Settings:**
+  - **Database password** — initial password for the `postgres` user. Stored as a Kubernetes Secret.
+  - **Database name** — name of the database created on first boot.
+  - **Persistence size** — size of the PersistentVolumeClaim (e.g. `1Gi`).
+- **What lands on your cluster:** a single Postgres Pod, a PVC, a Service, and a Secret holding the password.

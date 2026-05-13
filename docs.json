@@ -17,6 +17,7 @@
         "tab": "Docs",
         "groups": [
           { "group": "Getting started", "pages": ["index", "quickstart"] },
+          { "group": "Plugins", "pages": ["install-plugin", "plugins"] },
           { "group": "Reference", "pages": ["install-cli", "install-cluster", "cli-reference"] }
         ]
       }
