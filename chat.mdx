@@ -1,0 +1,31 @@
+---
+title: "Chat"
+description: "Ask questions about your cluster's deployments in natural language."
+---
+
+Chat is an AI assistant in the dashboard that answers questions about the Deployments running on your registered cluster. It's backed by Claude and has read-only access to your cluster's deployment state.
+
+## Where it lives
+
+Sign in at [app.resyndeo.com](https://app.resyndeo.com) and open **Chat**.
+
+## What you can ask
+
+- "What's running on my cluster?"
+- "Are any deployments unhealthy?"
+- "How many replicas does `nginx` have?"
+
+The assistant streams its answer as it types. When it needs data, it calls one of two tools and shows a pill with the tool name and arguments:
+
+- `list_deployments` — every deployment with image, replicas, health, and age.
+- `get_deployment` — details for a single deployment by namespace and name.
+
+## Prerequisites
+
+- A cluster registered with Resyndeo. See [Install a cluster](/install-cluster).
+- The in-cluster daemon online, so deployment state is current.
+
+## Limits
+
+- Read-only. Chat cannot install plugins, scale workloads, or change cluster state.
+- Scoped to Deployments today. Other Kubernetes resources aren't yet exposed.
