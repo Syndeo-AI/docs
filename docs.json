@@ -22,8 +22,8 @@
     ]
   },
   "logo": {
-    "light": "/favicon.png",
-    "dark": "/favicon.png"
+    "light": "/logo.png",
+    "dark": "/logo.png"
   },
   "navbar": {
     "primary": {
