@@ -3,9 +3,15 @@
   "theme": "mint",
   "name": "Resyndeo",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#ea580c",
+    "light": "#ff8b32",
+    "dark": "#7f2b00"
+  },
+  "background": {
+    "color": {
+      "light": "#f0e3db",
+      "dark": "#100e0c"
+    }
   },
   "favicon": "/favicon.png",
   "navigation": {
